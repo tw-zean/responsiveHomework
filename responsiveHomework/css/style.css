@@ -1,0 +1,72 @@
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+div img {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+div {
+    display: inline-block;
+    width: 24%;  /* Default width for divs */
+    margin: 5px;
+    padding: 2px;
+    text-align: center;
+}
+
+/* First media query at 772px */
+@media all and (min-width: 772px) {
+    div {
+        width: 45vw;  /* 45% of viewport width */
+    }
+
+    img {
+        max-height: 30vh;  /* 30% of viewport height */
+    }
+
+    /* Make divs appear side by side */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/* Second media query at 998px */
+@media all and (min-width: 998px) {
+    div {
+        width: 30vw;  /* 30% of viewport width */
+    }
+
+    /* Ensure divs appear next to each other */
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
